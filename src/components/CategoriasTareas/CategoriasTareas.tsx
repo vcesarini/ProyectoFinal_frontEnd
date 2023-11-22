@@ -1,6 +1,7 @@
 import { Card, Container, Row } from "react-bootstrap";
 import { Task } from "../../types/Task";
 import { Link } from "react-router-dom";
+import './categoriastareas.css';
 
 const CategoriasTareas = ({tasks} : {tasks: Task[]}) => {
   const categorias = ['PORHACER', 'ENPRODUCCION', 'PORTESTEAR', 'COMPLETADA'];

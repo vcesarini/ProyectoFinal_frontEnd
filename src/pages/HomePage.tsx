@@ -8,7 +8,6 @@ const HomePage = () => {
       <CarouselHome/>
       <Container>
         <Row className='d-flex justify-content-center'>
-          <h1>home</h1>
           <Categoria/>
         </Row>
       </Container>

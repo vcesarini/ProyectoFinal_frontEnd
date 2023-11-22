@@ -1,0 +1,17 @@
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.multiline-ellipsis {
+overflow: hidden;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+white-space: pre-wrap;
+}
+
+.bg-red {
+    background-color: #ff0000;
+}

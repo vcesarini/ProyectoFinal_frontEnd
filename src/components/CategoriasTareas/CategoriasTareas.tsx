@@ -10,25 +10,25 @@ const CategoriasTareas = ({tasks} : {tasks: Task[]}) => {
 
     {categorias.map((categoria, index) => (
     <Container key={index}>
-      <h3>{categoria}</h3>
+      <Row className='d-flex justify-content-center m-3 text-center'>
+        <h5>{categoria}</h5>
+      </Row>
 
-      <Row>
+      <Row className='d-flex justify-content-center gap-3'>
       {tasks.filter(tasks => tasks.estado === categoria.toUpperCase())
         .map(task => (
 
-        <Card style={{ width: '18rem' }} key={task.id}>
+        <Card style={{ width: '18rem', padding: '0', marginBottom: '20px' }} key={task.id}>
           <Card.Img variant="top" src={task.imagen} />
           <Card.Body>
             <Card.Title>{task.titulo}</Card.Title>
-            <Card.Text>
+            <Card.Text className="multiline-ellipsis">
               {task.descripcion}
             </Card.Text>
             <Card.Text>
-              {task.tiempo}<br></br>
-              {task.responsable}<br></br>
-              {task.estado}<br></br>
+              <b>Estado de tarea: {task.estado}</b>
             </Card.Text>
-            <Link to={`/detalle/${task.id}`} className="btn btn-info">DETALLE TAREA</Link>
+            <Link to={`/detalle/${task.id}`} className="btn btn-success">DETALLE TAREA</Link>
           </Card.Body>
         </Card>
         

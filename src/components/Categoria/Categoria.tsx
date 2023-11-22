@@ -31,8 +31,8 @@ useEffect (() => {
  
   return (
     <Container>
-      <Row> 
-        <CategoriaSelector onSelectedCategory={setSelectedCategory}/>
+      <Row className='d-flex justify-content-center'>
+        <CategoriaSelector onSelectedCategory={setSelectedCategory} />
         <CategoriasTareas tasks={filteredTasks.length > 0 ? filteredTasks : tasks} />
       </Row>
     </Container>

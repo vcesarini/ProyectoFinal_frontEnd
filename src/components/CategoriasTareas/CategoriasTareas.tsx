@@ -1,7 +1,6 @@
-import { Button, Card, Container, Row } from "react-bootstrap";
+import { Card, Container, Row } from "react-bootstrap";
 import { Task } from "../../types/Task";
 import { Link } from "react-router-dom";
-import './categoriastareas.css';
 
 const CategoriasTareas = ({tasks} : {tasks: Task[]}) => {
   const categorias = ['PORHACER', 'ENPRODUCCION', 'PORTESTEAR', 'COMPLETADA'];
@@ -24,9 +23,9 @@ const CategoriasTareas = ({tasks} : {tasks: Task[]}) => {
         .map(task => (
 
         <Card style={{ width: '18rem', padding: '0', marginBottom: '20px' }} key={task.id}>
-          <Card.Img variant="top" src={task.imagen} />
+          <Card.Img variant="top" src={task.imagen} className="card-img" />
           <Card.Body>
-            <Card.Title>{task.titulo}</Card.Title>
+            <Card.Title className="titulo-ellipsis">{task.titulo}</Card.Title>
             <Card.Text className="multiline-ellipsis">
               {task.descripcion}
             </Card.Text>

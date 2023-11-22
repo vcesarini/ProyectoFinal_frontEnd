@@ -6,7 +6,6 @@ import { Task } from "../../types/Task";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BsArrowClockwise, BsTrash3 } from "react-icons/bs";
-import './detalletarea.css'
 
 const DetalleTarea = () => {
   const { taskId } = useParams<{ taskId?: string}>();
@@ -134,9 +133,9 @@ const DetalleTarea = () => {
               {relatedTasks.map((relatedTasks) => (
               <Col key={relatedTasks.id} style={{display:'contents'}}>
               <Card style={{ width: '18rem', padding: '0', margin: '10px' }}>
-              <Card.Img variant="top" src={relatedTasks.imagen} />
+              <Card.Img variant="top" src={relatedTasks.imagen} className="card-img"/>
               <Card.Body>
-                <Card.Title>{relatedTasks.titulo}</Card.Title>
+                <Card.Title className="titulo-ellipsis">{relatedTasks.titulo}</Card.Title>
                 <Card.Text className="multiline-ellipsis">
                     {relatedTasks.descripcion}
                 </Card.Text>

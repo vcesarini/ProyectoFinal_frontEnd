@@ -111,7 +111,7 @@ const ModalAgregarTarea: React.FC<ModalAgregarTareaProps> = ({showModal, handleC
                     <div className="text-danger">{formik.errors.imagen}</div>
                 ):null}
 
-                <label htmlFor="responsable"></label>
+                {/* <label htmlFor="responsable"></label>
                 <Form.Control
                     type="text"
                     className="form-control"
@@ -122,6 +122,25 @@ const ModalAgregarTarea: React.FC<ModalAgregarTareaProps> = ({showModal, handleC
                     onBlur={formik.handleBlur}
                     value={formik.values.responsable}
                 />
+                {formik.touched.responsable && formik.errors.responsable ? (
+                    <div className="text-danger">{formik.errors.responsable}</div>
+                ):null} */}
+
+                <label htmlFor="responsable"></label>
+                <Form.Select
+                id="responsable"
+                name="responsable"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.responsable}
+                >
+                    <option value="">Seleccionar responsable</option>
+                    <option value="responsable 1">Responsable 1</option>
+                    <option value="responsable 2">Responsable 2</option>
+                    <option value="responsable 3">Responsable 3</option>
+                    <option value="responsable 4">Responsable 4</option>
+                    <option value="responsable 5">Responsable 5</option>
+                </Form.Select>
                 {formik.touched.responsable && formik.errors.responsable ? (
                     <div className="text-danger">{formik.errors.responsable}</div>
                 ):null}

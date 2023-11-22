@@ -23,14 +23,16 @@
 }
 .btn.btn-info:hover {
     background-color: rgb(56, 2, 97);
+    color: #fff;
 }
 
 .btn.btn-primary {
-    background-color: #fc36eb;
+    background-color: #be01f7;
     border: 0;
 }
 .btn.btn-primary:hover {
-    background-color: #941a8a;
+    background-color: rgb(56, 2, 97);
+    color: #fff;
 }
 
 .btn.btn-warning {

@@ -7,5 +7,35 @@
 
 .btn.btn-success {
     width: 100%;
+    background-color: #8c01f7;
+    border: 0;
+}
+.btn.btn-success:hover {
+    background-color: #51018e;
+}
+
+.btn.btn-primary {
+    background-color: #fc36eb;
+    border: 0;
+}
+.btn.btn-primary:hover {
+    background-color: #941a8a;
+}
+
+.btn.btn-warning {
+    width: 100%;
     background-color: red;
+    border: 0;
+}
+
+.detalle-tarea p {
+    text-align: left;
+    padding: 0 20px;
+    line-height: 25px;
+}
+
+.estado-tarea {
+    background-color: #efefef;
+    border-radius: 10px;
+    padding: 30px 20px;
 }

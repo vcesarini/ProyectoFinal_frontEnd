@@ -1,10 +1,14 @@
-import { Card, Container, Row } from "react-bootstrap";
+import { Button, Card, Container, Row } from "react-bootstrap";
 import { Task } from "../../types/Task";
 import { Link } from "react-router-dom";
 import './categoriastareas.css';
 
 const CategoriasTareas = ({tasks} : {tasks: Task[]}) => {
   const categorias = ['PORHACER', 'ENPRODUCCION', 'PORTESTEAR', 'COMPLETADA'];
+  
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  };
 
   return (
     <Container id="categorias">
@@ -29,7 +33,7 @@ const CategoriasTareas = ({tasks} : {tasks: Task[]}) => {
             <Card.Text>
               <b>Estado de tarea: {task.estado}</b>
             </Card.Text>
-            <Link to={`/detalle/${task.id}`} className="btn btn-success">DETALLE TAREA</Link>
+            <Link to={`/detalle/${task.id}`} onClick={scrollToTop} className="btn btn-success">DETALLE TAREA</Link>
           </Card.Body>
         </Card>
         

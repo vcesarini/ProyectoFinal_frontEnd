@@ -8,8 +8,8 @@ interface CategoriaSelectorPros {
 const CategoriaSelector: React.FC<CategoriaSelectorPros> = ({ onSelectedCategory }) => {
   const categorias = [
     { nombre: 'PORHACER', icono: <BsCheck/> },
-    { nombre: 'ENPRODUCCION', icono: <BsGear/> },
     { nombre: 'PORTESTEAR', icono: <BsPencilSquare/> },
+    { nombre: 'ENPRODUCCION', icono: <BsGear/> },
     { nombre: 'COMPLETADA', icono: <BsBookmarkCheck/> },
   ];
 

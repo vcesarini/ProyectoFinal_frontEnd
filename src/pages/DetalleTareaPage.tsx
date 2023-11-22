@@ -5,7 +5,7 @@ import DetalleTarea from "../components/DetalleTarea/DetalleTarea"
 const DetalleTareaPage = () => {
   return (
     <>
-      <HeroImage url="https://fakeimg.pl/1920x200/fc36eb/ffffff?text=Detalle de tarea" />
+      <HeroImage url="https://fakeimg.pl/1920x200/fc36eb/ffffff?text=Detalle de la tarea" />
       <Container className="mt-5">
         <Row className='d-flex justify-content-center'>
           <DetalleTarea/>

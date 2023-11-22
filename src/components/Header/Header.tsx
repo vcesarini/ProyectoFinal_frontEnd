@@ -24,19 +24,19 @@ const Header = () => {
     const createTask = async (newTask: Task) => {
         try {
             const result = await TaskService.createTask(newTask);
-            console.log('nueva task', result.id);
+            console.log('Tarea creada correctamente', result.id);
             navigate(`/detalle/${result.id}`);
 
-            toast.success('tarea OK', {
+            toast.success('Tarea creada correctamente', {
                 position: toast.POSITION.TOP_RIGHT,
                 autoClose: 2000,
             });
         } catch (error) {
-            toast.error('error', {
+            toast.error('Algo salió mal', {
                 position: toast.POSITION.TOP_RIGHT,
                 autoClose: 2000,
             });
-            console.log('error', error);
+            console.log('Algo salió mal', error);
         }
     };
 

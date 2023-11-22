@@ -144,7 +144,7 @@ const ModalAgregarTarea: React.FC<ModalAgregarTareaProps> = ({showModal, handleC
                     <div className="text-danger">{formik.errors.estado}</div>
                 ):null}
                     
-                    <Button className="mt-3" variant="primary" type="submit">Agregar</Button>
+                    <Button className="mt-3" variant="info" type="submit"><b>AGREGAR</b></Button>
                 </Form>
             </Modal.Body>
             </Modal>

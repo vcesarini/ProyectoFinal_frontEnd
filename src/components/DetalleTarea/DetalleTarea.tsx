@@ -130,14 +130,13 @@ const DetalleTarea = () => {
 
           <hr></hr>
           <Row>
-            <h4 className="mb-4"><b>Tareas relacionadas con el estado {task.estado}</b></h4>
+            <h4 className="mb-4"><b>Tareas {task.estado}</b></h4>
               {relatedTasks.map((relatedTasks) => (
               <Col key={relatedTasks.id} style={{display:'contents'}}>
               <Card style={{ width: '18rem', padding: '0', margin: '10px' }}>
-              <Card.Img variant="top" src={task.imagen} />
+              <Card.Img variant="top" src={relatedTasks.imagen} />
               <Card.Body>
                 <Card.Title>{relatedTasks.titulo}</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
                 <Card.Text className="multiline-ellipsis">
                     {relatedTasks.descripcion}
                 </Card.Text>

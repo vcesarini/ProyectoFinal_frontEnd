@@ -6,7 +6,7 @@ const CarouselHome = () => {
       <Carousel.Item>
         <img 
         className='d-block w-100 slide-home'
-        src="../src/assets/slide-01.jpg" alt='' />
+        src="https://proyecto-final-front-end.vercel.app/src/assets/slide-01.jpg" alt='' />
         <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -16,7 +16,7 @@ const CarouselHome = () => {
       <Carousel.Item>
           <img 
             className='d-block w-100 slide-home'
-            src="../src/assets/slide-02.jpg" alt='' />        
+            src="https://proyecto-final-front-end.vercel.app/src/assets/slide-02.jpg" alt='' />        
           <Carousel.Caption>
           <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -26,7 +26,7 @@ const CarouselHome = () => {
       <Carousel.Item>
         <img 
         className='d-block w-100 slide-home'
-        src="../src/assets/slide-03.jpg" alt='' />        
+        src="https://proyecto-final-front-end.vercel.app/src/assets/slide-03.jpg" alt='' />        
         <Carousel.Caption>
           <h3>Third slide label</h3>
           <p>

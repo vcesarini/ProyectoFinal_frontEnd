@@ -28,12 +28,12 @@ const Header = () => {
             navigate(`/detalle/${result.id}`);
 
             toast.success('Tarea creada correctamente', {
-                position: toast.POSITION.TOP_RIGHT,
+                position: toast.POSITION.TOP_CENTER,
                 autoClose: 2000,
             });
         } catch (error) {
             toast.error('Algo salió mal', {
-                position: toast.POSITION.TOP_RIGHT,
+                position: toast.POSITION.TOP_CENTER,
                 autoClose: 2000,
             });
             console.log('Algo salió mal', error);

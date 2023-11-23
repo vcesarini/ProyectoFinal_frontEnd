@@ -68,7 +68,7 @@ const DetalleTarea = () => {
       if (taskId) {
         await TaskService.deleteTask(parseInt(taskId, 10));
         toast.success('Tarea eliminada correctamente', {
-          position: toast.POSITION.TOP_RIGHT,
+          position: toast.POSITION.TOP_CENTER,
           autoClose: 2000,
         });
         console.log('Tarea eliminada correctamente')
@@ -76,7 +76,7 @@ const DetalleTarea = () => {
       }
     } catch (error) {
       toast.error('Selecciona un estado válido', {
-        position: toast.POSITION.TOP_RIGHT,
+        position: toast.POSITION.TOP_CENTER,
         autoClose: 2000,
       });
       console.log('Error al eliminar tarea', error);

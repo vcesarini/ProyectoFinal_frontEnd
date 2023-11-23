@@ -81,3 +81,15 @@ display: -webkit-box;
 -webkit-line-clamp: 3;
 white-space: pre-wrap;
 }
+
+  @media (width >= 992px) {
+    .agregar-tarea {
+        width: auto;
+    }
+  }
+
+  @media (width <= 991px) {
+    .agregar-tarea {
+        width: 100%;
+    }
+  }

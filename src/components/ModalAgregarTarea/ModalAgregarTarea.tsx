@@ -1,6 +1,6 @@
 import { Task } from "../../types/Task";
 import { useFormik } from "formik";
-import { Button, Form, Modal } from "react-bootstrap";
+import { Button, Row, Col, Form, Modal } from "react-bootstrap";
 import * as Yup from 'yup';
 
 type ModalAgregarTareaProps = {
@@ -52,118 +52,126 @@ const ModalAgregarTarea: React.FC<ModalAgregarTareaProps> = ({showModal, handleC
             <Modal.Body>
                 <Form onSubmit={formik.handleSubmit}>
                 
-                <label htmlFor="titulo"></label>
-                <Form.Control
-                    type="text"
-                    className="form-control"
-                    id="titulo"
-                    name="titulo"
-                    placeholder="Título"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.titulo}
-                />
+                <Form.Group as={Row} className="mb-3" controlId="titulo">
+                    <Form.Label htmlFor="titulo" column sm="3">Título</Form.Label>
+                    <Col sm="9">
+                        <Form.Control
+                        type="text"
+                        className="form-control"
+                        id="titulo"
+                        name="titulo"
+                        placeholder="Título"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.titulo}
+                    />
                 {formik.touched.titulo && formik.errors.titulo ? (
-                    <div className="text-danger">{formik.errors.titulo}</div>
+                    <div className="textErrorModal">{formik.errors.titulo}</div>
                 ):null}
+                    </Col>
+                </Form.Group>
 
-                <label htmlFor="descripcion"></label>
-                <Form.Control
-                    as="textarea"
-                    className="form-control"
-                    id="descripcion"
-                    name="descripcion"
-                    placeholder="Descripción"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.descripcion}
-                />
+                <Form.Group as={Row} className="mb-3" controlId="descripcion">
+                    <Form.Label htmlFor="descripcion" column sm="3">Descripción</Form.Label>
+                    <Col sm="9">
+                        <Form.Control
+                        as="textarea"
+                        className="form-control"
+                        id="descripcion"
+                        name="descripcion"
+                        placeholder="Descripción"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.descripcion}
+                    />
                 {formik.touched.descripcion && formik.errors.descripcion ? (
-                    <div className="text-danger">{formik.errors.descripcion}</div>
+                    <div className="textErrorModal">{formik.errors.descripcion}</div>
                 ):null}
-
-                <label htmlFor="tiempo"></label>
-                <Form.Control
-                    type="number"
-                    className="form-control"
-                    id="tiempo"
-                    name="tiempo"
-                    placeholder="Ej: 10 días"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.tiempo}
-                />
+                    </Col>
+                </Form.Group>
+                
+                <Form.Group as={Row} className="mb-3" controlId="tiempo">
+                    <Form.Label htmlFor="tiempo" column sm="3">Días</Form.Label>
+                    <Col sm="9">
+                        <Form.Control
+                        type="number"
+                        className="form-control"
+                        id="tiempo"
+                        name="tiempo"
+                        placeholder="Ej: 10 días"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.tiempo}
+                    />
                 {formik.touched.tiempo && formik.errors.tiempo ? (
-                    <div className="text-danger">{formik.errors.tiempo}</div>
+                    <div className="textErrorModal">{formik.errors.tiempo}</div>
                 ):null}
+                    </Col>
+                </Form.Group>
 
-                <label htmlFor="imagen"></label>
-                <Form.Control
-                    type="text"
-                    className="form-control"
-                    id="imagen"
-                    name="imagen"
-                    placeholder="URL de la imagen"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.imagen}
-                />
+                <Form.Group as={Row} className="mb-3" controlId="imagen">
+                    <Form.Label htmlFor="imagen" column sm="3">URL</Form.Label>
+                    <Col sm="9">
+                        <Form.Control
+                        type="text"
+                        className="form-control"
+                        id="imagen"
+                        name="imagen"
+                        placeholder="URL"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.imagen}
+                    />
                 {formik.touched.imagen && formik.errors.imagen ? (
-                    <div className="text-danger">{formik.errors.imagen}</div>
+                    <div className="textErrorModal">{formik.errors.imagen}</div>
                 ):null}
+                    </Col>
+                </Form.Group>
 
-                {/* <label htmlFor="responsable"></label>
-                <Form.Control
-                    type="text"
-                    className="form-control"
-                    id="responsable"
-                    name="responsable"
-                    placeholder="Responsable"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.responsable}
-                />
-                {formik.touched.responsable && formik.errors.responsable ? (
-                    <div className="text-danger">{formik.errors.responsable}</div>
-                ):null} */}
+                <Form.Group as={Row} className="mb-3" controlId="responsable">
+                    <Form.Label htmlFor="responsable" column sm="3">Responsable</Form.Label>
+                    <Col sm="9">
+                        <Form.Select
+                            id="responsable"
+                            name="responsable"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            value={formik.values.responsable}
+                            >
+                        <option value="">Seleccionar responsable</option>
+                        <option value="responsable 1">Responsable 1</option>
+                        <option value="responsable 2">Responsable 2</option>
+                        <option value="responsable 3">Responsable 3</option>
+                        <option value="responsable 4">Responsable 4</option>
+                        <option value="responsable 5">Responsable 5</option>
+                        </Form.Select>
+                        {formik.touched.responsable && formik.errors.responsable ? (
+                        <div className="textErrorModal">{formik.errors.responsable}</div>
+                        ):null}
+                    </Col>
+                </Form.Group>
 
-                <label htmlFor="responsable"></label>
-                <Form.Select
-                id="responsable"
-                name="responsable"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.responsable}
-                >
-                    <option value="">Seleccionar responsable</option>
-                    <option value="responsable 1">Responsable 1</option>
-                    <option value="responsable 2">Responsable 2</option>
-                    <option value="responsable 3">Responsable 3</option>
-                    <option value="responsable 4">Responsable 4</option>
-                    <option value="responsable 5">Responsable 5</option>
-                </Form.Select>
-                {formik.touched.responsable && formik.errors.responsable ? (
-                    <div className="text-danger">{formik.errors.responsable}</div>
-                ):null}
-                    
-                <label htmlFor="estado"></label>
-                <Form.Select 
-                id="estado"
-                name="estado"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.estado}
-                >
-                    <option value="">Estado de la tarea</option>
-                    <option value="PORHACER">Por hacer</option>
-                    <option value="ENPRODUCCION">En producción</option>
-                    <option value="PORTESTEAR">Por testear</option>
-                    <option value="COMPLETADA">Completada</option>
-                </Form.Select>
-                {formik.touched.estado && formik.errors.estado ? (
-                    <div className="text-danger">{formik.errors.estado}</div>
-                ):null}
-                    
+                <Form.Group as={Row} className="mb-3" controlId="estado">
+                    <Form.Label htmlFor="estado" column sm="3">Estado</Form.Label>
+                    <Col sm="9">
+                        <Form.Select 
+                        id="estado"
+                        name="estado"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.estado}
+                        >
+                            <option value="">Estado de la tarea</option>
+                            <option value="PORHACER">Por hacer</option>
+                            <option value="ENPRODUCCION">En producción</option>
+                            <option value="PORTESTEAR">Por testear</option>
+                            <option value="COMPLETADA">Completada</option>
+                        </Form.Select>
+                        {formik.touched.estado && formik.errors.estado ? (
+                            <div className="textErrorModal">{formik.errors.estado}</div>
+                        ):null}
+                    </Col>
+                </Form.Group>
                     <Button className="mt-3" variant="info" type="submit"><b>AGREGAR</b></Button>
                 </Form>
             </Modal.Body>

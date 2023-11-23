@@ -82,6 +82,12 @@ display: -webkit-box;
 white-space: pre-wrap;
 }
 
+.textErrorModal {
+    padding: 0 4px;
+    font-size: small;
+    color: red;
+}
+
   @media (width >= 992px) {
     .agregar-tarea {
         width: auto;
@@ -91,6 +97,7 @@ white-space: pre-wrap;
         height: 600px;
         object-fit: cover;
     }
+
   }
 
   @media (width <= 991px) {

@@ -1,7 +1,7 @@
 import { Task } from '../types/Task';
 
-//const BASE_URL = "https://proyecto-final-back-end-7a7e.onrender.com/tasks";
-const BASE_URL = "http://localhost:3000/tasks";
+const BASE_URL = "https://proyecto-final-back-end-7a7e.onrender.com/tasks";
+//const BASE_URL = "http://localhost:3000/tasks";
 
 export const TaskService = {
 

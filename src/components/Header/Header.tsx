@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { Button, Col, Container, Nav, NavDropdown, Navbar, Row } from 'react-bootstrap';
+import { Button, Container, Nav, NavDropdown, Navbar, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { TaskService } from '../../services/TaskService';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Task } from '../../types/Task';
 import ModalAgregarTarea from '../ModalAgregarTarea/ModalAgregarTarea';
-import { BsBandaidFill, BsBraces, BsBug, BsBugFill } from 'react-icons/bs';
+import { BsBandaidFill, BsBraces, BsBugFill } from 'react-icons/bs';
 
 const Header = () => {
 

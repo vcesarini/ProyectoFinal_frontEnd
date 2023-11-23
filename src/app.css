@@ -86,10 +86,20 @@ white-space: pre-wrap;
     .agregar-tarea {
         width: auto;
     }
+
+    .slide-home {
+        height: 600px;
+        object-fit: cover;
+    }
   }
 
   @media (width <= 991px) {
     .agregar-tarea {
         width: 100%;
+    }
+
+    .slide-home {
+        height: 300px;
+        object-fit: cover;
     }
   }

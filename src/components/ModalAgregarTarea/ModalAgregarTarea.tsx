@@ -52,7 +52,7 @@ const ModalAgregarTarea: React.FC<ModalAgregarTareaProps> = ({showModal, handleC
             <Modal.Body>
                 <Form onSubmit={formik.handleSubmit}>
                 
-                <Form.Group as={Row} className="mb-3" controlId="titulo">
+                <Form.Group as={Row} className="mb-3">
                     <Form.Label htmlFor="titulo" column sm="3">Título</Form.Label>
                     <Col sm="9">
                         <Form.Control
@@ -71,7 +71,7 @@ const ModalAgregarTarea: React.FC<ModalAgregarTareaProps> = ({showModal, handleC
                     </Col>
                 </Form.Group>
 
-                <Form.Group as={Row} className="mb-3" controlId="descripcion">
+                <Form.Group as={Row} className="mb-3">
                     <Form.Label htmlFor="descripcion" column sm="3">Descripción</Form.Label>
                     <Col sm="9">
                         <Form.Control
@@ -90,7 +90,7 @@ const ModalAgregarTarea: React.FC<ModalAgregarTareaProps> = ({showModal, handleC
                     </Col>
                 </Form.Group>
                 
-                <Form.Group as={Row} className="mb-3" controlId="tiempo">
+                <Form.Group as={Row} className="mb-3">
                     <Form.Label htmlFor="tiempo" column sm="3">Días</Form.Label>
                     <Col sm="9">
                         <Form.Control
@@ -109,7 +109,7 @@ const ModalAgregarTarea: React.FC<ModalAgregarTareaProps> = ({showModal, handleC
                     </Col>
                 </Form.Group>
 
-                <Form.Group as={Row} className="mb-3" controlId="imagen">
+                <Form.Group as={Row} className="mb-3">
                     <Form.Label htmlFor="imagen" column sm="3">URL</Form.Label>
                     <Col sm="9">
                         <Form.Control
@@ -128,7 +128,7 @@ const ModalAgregarTarea: React.FC<ModalAgregarTareaProps> = ({showModal, handleC
                     </Col>
                 </Form.Group>
 
-                <Form.Group as={Row} className="mb-3" controlId="responsable">
+                <Form.Group as={Row} className="mb-3">
                     <Form.Label htmlFor="responsable" column sm="3">Responsable</Form.Label>
                     <Col sm="9">
                         <Form.Select
@@ -151,7 +151,7 @@ const ModalAgregarTarea: React.FC<ModalAgregarTareaProps> = ({showModal, handleC
                     </Col>
                 </Form.Group>
 
-                <Form.Group as={Row} className="mb-3" controlId="estado">
+                <Form.Group as={Row} className="mb-3">
                     <Form.Label htmlFor="estado" column sm="3">Estado</Form.Label>
                     <Col sm="9">
                         <Form.Select 

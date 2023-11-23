@@ -32,12 +32,13 @@ const ModalAgregarTarea: React.FC<ModalAgregarTareaProps> = ({showModal, handleC
 
         validationSchema: validationSchema,
 
-        onSubmit: async (values) => {
+        onSubmit: async (values, {resetForm}) => {
             values.estado.toUpperCase();
             console.log('datos del form', JSON.stringify(values));
 
             await createTask(values);
             handleClose();
+            resetForm();
         },
 
     });

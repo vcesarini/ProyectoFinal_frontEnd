@@ -102,4 +102,13 @@ white-space: pre-wrap;
         height: 300px;
         object-fit: cover;
     }
+
+    .detalle-tarea {
+        padding: 0;
+        margin-top: 20px;
+    }
+    
+    .estado-tarea {
+        border-radius: 0;
+    }
   }

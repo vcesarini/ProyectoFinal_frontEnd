@@ -24,7 +24,7 @@ const CategoriasTareas = ({tasks} : {tasks: Task[]}) => {
         <Col xs={6} md={4} lg={3}>
         <Card key={task.id}>
           <Card.Img variant="top" src={task.imagen} className="card-img" />
-          <Card.Body style={{ height: '260px'}}>
+          <Card.Body>
             <Card.Title className="titulo-ellipsis"><b>{task.titulo}</b></Card.Title>
             <Card.Text className="multiline-ellipsis">
               {task.descripcion}

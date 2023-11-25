@@ -104,7 +104,7 @@ const DetalleTarea = () => {
               <Col md={4} className="detalle-tarea">
                 <p><b>Descripcion: </b>{task.descripcion}</p>
               </Col>
-              <Col md={4}>
+              <Col md={4} className="resp-tiempo">
                 <p>Responsable: <b>{task.responsable}</b></p>
                 <p>Duración: <b>{task.tiempo} días</b></p>
                 <br></br>
@@ -128,27 +128,30 @@ const DetalleTarea = () => {
           </Row>
 
           <hr></hr>
-          <Row>
-            <h4 className="mb-4"><b>Tareas {task.estado}</b></h4>
-              {relatedTasks.map((relatedTasks) => (
-              <Col key={relatedTasks.id} style={{display:'contents'}}>
-              <Card style={{ width: '18rem', padding: '0', margin: '10px' }}>
-              <Card.Img variant="top" src={relatedTasks.imagen} className="card-img"/>
-              <Card.Body>
-                <Card.Title className="titulo-ellipsis">{relatedTasks.titulo}</Card.Title>
-                <Card.Text className="multiline-ellipsis">
-                    {relatedTasks.descripcion}
-                </Card.Text>
-                <Button variant="success"
-                onClick={() => {
-                  navigate(`/detalle/${relatedTasks.id}`);
-                  scrollToTop();
-                }}> VER TAREA </Button>
+          <Row className='d-flex justify-content-center'>
+          <h4 className="mb-4"><b>Tareas {task.estado}</b></h4>
+            {relatedTasks.map((relatedTasks) => (
+          <Col xs={6} md={4} lg={3} className="my-3">
+          <Card key={task.id}>
+            <Card.Img variant="top" src={relatedTasks.imagen} className="card-img" />
+            <Card.Body>
+              <Card.Title className="titulo-ellipsis"><b>{relatedTasks.titulo}</b></Card.Title>
+              <Card.Text className="multiline-ellipsis">
+                {relatedTasks.descripcion}
+              </Card.Text>
+              <Card.Text className="mt-4">
+                <b>La tarea está {relatedTasks.estado}</b>
+              </Card.Text>
+              <Button variant="success"
+                  onClick={() => {
+                    navigate(`/detalle/${relatedTasks.id}`);
+                    scrollToTop();
+                  }}> VER TAREA </Button>
               </Card.Body>
-              </Card>
-              </Col>
-              ))}
-          </Row>
+          </Card>
+          </Col>
+            ))}
+            </Row>
         </Container>
       )}
     </>      

@@ -118,4 +118,8 @@ white-space: pre-wrap;
     .estado-tarea {
         border-radius: 0;
     }
+
+    .resp-tiempo {
+        padding: 20px;
+    }
   }

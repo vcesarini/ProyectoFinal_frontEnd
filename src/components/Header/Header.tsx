@@ -50,19 +50,19 @@ const Header = () => {
                         <Nav className="me-auto">
                             <Nav.Link onClick={() => navigate ('/')}>Inicio</Nav.Link>
                             <Nav.Link onClick={() => navigate ('/nosotros')}>Nosotros</Nav.Link>
-                            <NavDropdown title="Tareas" id="basic-nav-dropdown">
+                            {/* <NavDropdown title="Tareas" id="basic-nav-dropdown">
                                 <NavDropdown.Item onClick={() => navigate ('/tareasPage')}>Por hacer</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.1">Por testear</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.1">En producción</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.1">Completada</NavDropdown.Item>
-                            </NavDropdown>
-                            <Nav.Link onClick={() => navigate ('/contacto')}>Contacto</Nav.Link>
+                            </NavDropdown> */}
+                            {/* <Nav.Link onClick={() => navigate ('/contacto')}>Contacto</Nav.Link> */}
                             <Nav.Link className='d-none d-md-block'><BsBugFill /></Nav.Link>
                             <Nav.Link className='d-none d-md-block'><BsBandaidFill /></Nav.Link>
                         </Nav>
 
                         <Nav className="d-md-none">
-                            <Nav.Link onClick={() => navigate ('/')}>Iconos</Nav.Link>
+                            <Nav.Link onClick={() => navigate ('/')}>Iconos Mobile</Nav.Link>
                         </Nav>
 
                     </Navbar.Collapse>

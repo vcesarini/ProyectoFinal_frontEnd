@@ -8,8 +8,8 @@ const CarouselHome = () => {
         className='d-block w-100 slide-home'
         src="https://raw.githubusercontent.com/vcesarini/ProyectoFinal_frontEnd/master/src/assets/slide-01.jpg" alt='' />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>¿Qué tarea debo hacer?</h3>
+          <p>Los lunes no deberíamos tener tareas</p>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -18,8 +18,8 @@ const CarouselHome = () => {
             className='d-block w-100 slide-home'
             src="https://raw.githubusercontent.com/vcesarini/ProyectoFinal_frontEnd/master/src/assets/slide-02.jpg" alt='' />        
           <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Bueno, ya estamos mejor</h3>
+          <p>Hoy cafecito y cargamos tareas por mobile</p>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -28,9 +28,9 @@ const CarouselHome = () => {
         className='d-block w-100 slide-home'
         src="https://raw.githubusercontent.com/vcesarini/ProyectoFinal_frontEnd/master/src/assets/slide-03.jpg" alt='' />        
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3>A pura concentración</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            Dejamos la guitarra y le metemos lápiz y papel
           </p>
         </Carousel.Caption>
       </Carousel.Item>

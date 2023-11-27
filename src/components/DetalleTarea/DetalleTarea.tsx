@@ -131,7 +131,7 @@ const DetalleTarea = () => {
           <Row className='d-flex justify-content-center'>
           <h4 className="mb-4"><b>Tareas {task.estado}</b></h4>
             {relatedTasks.map((relatedTasks) => (
-          <Col xs={6} md={4} lg={3} className="my-3">
+          <Col xs={6} md={4} lg={3} className="my-2">
           <Card key={task.id}>
             <Card.Img variant="top" src={relatedTasks.imagen} className="card-img" />
             <Card.Body>

@@ -21,7 +21,7 @@ const CategoriasTareas = ({tasks} : {tasks: Task[]}) => {
       <Row className='d-flex justify-content-center'>
       {tasks.filter(tasks => tasks.estado === categoria.toUpperCase())
         .map(task => (
-        <Col xs={6} md={4} lg={3}>
+        <Col xs={6} md={4} lg={3} className="my-2">
         <Card key={task.id}>
           <Card.Img variant="top" src={task.imagen} className="card-img" />
           <Card.Body>

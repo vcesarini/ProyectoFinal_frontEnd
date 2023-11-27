@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Container, Nav, NavDropdown, Navbar, Row } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { TaskService } from '../../services/TaskService';
 import { toast } from 'react-toastify';
@@ -41,7 +41,6 @@ const Header = () => {
     };
 
     return (
-        <>
             <Navbar expand="lg" className="bg-body-secondary">
                 <Container>
                     <Navbar.Brand onClick={() => navigate ('/')}><BsBraces/> VC PROYECTO</Navbar.Brand>
@@ -50,13 +49,6 @@ const Header = () => {
                         <Nav className="me-auto">
                             <Nav.Link onClick={() => navigate ('/')}>Inicio</Nav.Link>
                             <Nav.Link onClick={() => navigate ('/nosotros')}>Nosotros</Nav.Link>
-                            {/* <NavDropdown title="Tareas" id="basic-nav-dropdown">
-                                <NavDropdown.Item onClick={() => navigate ('/tareasPage')}>Por hacer</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.1">Por testear</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.1">En producción</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.1">Completada</NavDropdown.Item>
-                            </NavDropdown> */}
-                            {/* <Nav.Link onClick={() => navigate ('/contacto')}>Contacto</Nav.Link> */}
                             <Nav.Link className='d-none d-md-block'><BsBugFill /></Nav.Link>
                             <Nav.Link className='d-none d-md-block'><BsBandaidFill /></Nav.Link>
                         </Nav>
@@ -77,7 +69,6 @@ const Header = () => {
                 handleClose={handleCloseModal}
                 createTask={createTask}
             />
-        </>
     )
 }
 

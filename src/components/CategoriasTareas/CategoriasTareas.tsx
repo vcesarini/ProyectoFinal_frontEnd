@@ -3,7 +3,7 @@ import { Task } from "../../types/Task";
 import { Link } from "react-router-dom";
 
 const CategoriasTareas = ({tasks} : {tasks: Task[]}) => {
-  const categorias = ['PORHACER', 'ENPRODUCCION', 'PORTESTEAR', 'COMPLETADA'];
+  const categorias = ['PORHACER', 'PORTESTEAR', 'ENPRODUCCION', 'COMPLETADA'];
   
   const scrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });

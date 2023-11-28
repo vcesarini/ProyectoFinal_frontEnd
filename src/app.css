@@ -4,6 +4,11 @@
     font-family: 'Montserrat', Arial, sans-serif;
 }
 
+.position-fixed {
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
 
 .btn.btn-success {
     width: 100%;

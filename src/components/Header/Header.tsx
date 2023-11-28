@@ -42,7 +42,7 @@ const Header = () => {
 
     return (
         <>
-            <Navbar expand="lg" className="bg-body-secondary">
+            <Navbar expand="lg" className="bg-body-secondary position-fixed">
                 <Container>
                     <Navbar.Brand onClick={() => navigate ('/')}><BsBraces/> VC PROYECTO</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />

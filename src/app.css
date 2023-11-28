@@ -102,6 +102,9 @@ white-space: pre-wrap;
         height: 600px;
         object-fit: cover;
     }
+    .marginTop-carousel {
+        margin-top: 84px;
+    }
 
   }
 
@@ -126,5 +129,8 @@ white-space: pre-wrap;
 
     .resp-tiempo {
         padding: 20px;
+    }
+    .marginTop-carousel {
+        margin-top: 124px;
     }
   }

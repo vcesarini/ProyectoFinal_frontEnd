@@ -2,7 +2,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const CarouselHome = () => {
   return (
-    <Carousel style={{ marginTop: '84px' }}>
+    <Carousel className='marginTop-carousel'>
       <Carousel.Item>
         <img 
         className='d-block w-100 slide-home'

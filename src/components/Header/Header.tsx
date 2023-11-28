@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Container, Nav, Navbar, Row } from 'react-bootstrap';
+import { Button, Container, Nav, NavDropdown, Navbar, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { TaskService } from '../../services/TaskService';
 import { toast } from 'react-toastify';
@@ -50,6 +50,13 @@ const Header = () => {
                         <Nav className="me-auto">
                             <Nav.Link onClick={() => navigate ('/')}>Inicio</Nav.Link>
                             <Nav.Link onClick={() => navigate ('/nosotros')}>Nosotros</Nav.Link>
+                            <NavDropdown title="Tareas" id="basic-nav-dropdown">
+                                <NavDropdown.Item href="#PORHACER">Por hacer</NavDropdown.Item>
+                                <NavDropdown.Item href="#PORTESTEAR">Por testear</NavDropdown.Item>
+                                <NavDropdown.Item href="#ENPRODUCCION">En producción</NavDropdown.Item>
+                                <NavDropdown.Item href="#COMPLETADA">Completada</NavDropdown.Item>
+                            </NavDropdown>
+                            {/* <Nav.Link onClick={() => navigate ('/contacto')}>Contacto</Nav.Link> */}
                             <Nav.Link className='d-none d-md-block'><BsBugFill /></Nav.Link>
                             <Nav.Link className='d-none d-md-block'><BsBandaidFill /></Nav.Link>
                         </Nav>

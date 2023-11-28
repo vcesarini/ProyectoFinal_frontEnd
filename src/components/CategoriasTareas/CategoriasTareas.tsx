@@ -15,7 +15,7 @@ const CategoriasTareas = ({tasks} : {tasks: Task[]}) => {
     {categorias.map((categoria, index) => (
     <Container key={index}>
       <Row className='d-flex justify-content-center m-3 text-center'>
-        <h5>{categoria}</h5>
+        <h5 id={categoria}>{categoria}</h5>
       </Row>
 
       <Row className='d-flex justify-content-center'>

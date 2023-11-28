@@ -129,7 +129,7 @@ const DetalleTarea = () => {
 
           <hr></hr>
           <Row className='d-flex justify-content-center'>
-          <h4 className="mb-4"><b>Tareas {task.estado}</b></h4>
+          <h4 className="mb-4"><b>Tareas relacionadas</b></h4>
             {relatedTasks.map((relatedTasks) => (
           <Col xs={6} md={4} lg={3} className="my-2">
           <Card key={task.id}>

@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <ToastContainer />
+      <ToastContainer style={{ zIndex: 999999999 }} />
       <Router>
         <Header/>
           <Container style={{minHeight: '100vh', minWidth: '100%', padding: '0'}}>

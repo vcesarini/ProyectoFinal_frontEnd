@@ -44,7 +44,7 @@ const ModalAgregarTarea: React.FC<ModalAgregarTareaProps> = ({showModal, handleC
     });
 
     return (
-            <Modal show={showModal} onHide={handleClose}>
+            <Modal show={showModal} onHide={handleClose} style={{ zIndex: '99999' }}>
 
             <Modal.Header closeButton>
                 <Modal.Title> Agregar Tarea </Modal.Title>

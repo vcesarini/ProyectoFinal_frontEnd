@@ -10,6 +10,10 @@
     z-index: 9999;
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 .btn.btn-success {
     width: 100%;
     background-color: #8c01f7;
